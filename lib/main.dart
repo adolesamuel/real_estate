@@ -26,6 +26,21 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: AppColors.orangeFC9),
           useMaterial3: true,
           fontFamily: FontFamily.euclidCircularA,
+          iconButtonTheme: IconButtonThemeData(
+            style: IconButton.styleFrom(
+              foregroundColor: AppColors.whiteF8F,
+              backgroundColor: Colors.white.withOpacity(0.5),
+              minimumSize: const Size(45, 45),
+              iconSize: 20,
+            ),
+          ),
+          textButtonTheme: TextButtonThemeData(
+            style: TextButton.styleFrom(
+              foregroundColor: AppColors.whiteF8F,
+              backgroundColor: Colors.white.withOpacity(0.5),
+              minimumSize: const Size(45, 45),
+            ),
+          ),
         ),
         home: const RootPage(),
       ),

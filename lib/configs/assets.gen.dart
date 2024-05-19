@@ -8,11 +8,70 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 
 class $FontsGen {
   const $FontsGen();
 
   $FontsEuclidGen get euclid => const $FontsEuclidGen();
+}
+
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/building.svg
+  SvgGenImage get building => const SvgGenImage('assets/icons/building.svg');
+
+  /// File path: assets/icons/heart.svg
+  SvgGenImage get heart => const SvgGenImage('assets/icons/heart.svg');
+
+  /// File path: assets/icons/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
+
+  /// File path: assets/icons/justified.svg
+  SvgGenImage get justified => const SvgGenImage('assets/icons/justified.svg');
+
+  /// File path: assets/icons/layer.svg
+  SvgGenImage get layer => const SvgGenImage('assets/icons/layer.svg');
+
+  /// File path: assets/icons/map_arrow.svg
+  SvgGenImage get mapArrow => const SvgGenImage('assets/icons/map_arrow.svg');
+
+  /// File path: assets/icons/map_pin.svg
+  SvgGenImage get mapPin => const SvgGenImage('assets/icons/map_pin.svg');
+
+  /// File path: assets/icons/messages.svg
+  SvgGenImage get messages => const SvgGenImage('assets/icons/messages.svg');
+
+  /// File path: assets/icons/profile.svg
+  SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
+
+  /// File path: assets/icons/search.svg
+  SvgGenImage get search => const SvgGenImage('assets/icons/search.svg');
+
+  /// File path: assets/icons/search_filled.svg
+  SvgGenImage get searchFilled =>
+      const SvgGenImage('assets/icons/search_filled.svg');
+
+  /// File path: assets/icons/settings.svg
+  SvgGenImage get settings => const SvgGenImage('assets/icons/settings.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+        building,
+        heart,
+        home,
+        justified,
+        layer,
+        mapArrow,
+        mapPin,
+        messages,
+        profile,
+        search,
+        searchFilled,
+        settings
+      ];
 }
 
 class $AssetsImagesGen {
@@ -127,6 +186,7 @@ class $FontsEuclidGen {
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $FontsGen fonts = $FontsGen();
 }
@@ -197,6 +257,59 @@ class AssetGenImage {
       _assetName,
       bundle: bundle,
       package: package,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName);
+
+  final String _assetName;
+
+  SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    SvgTheme theme = const SvgTheme(),
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    return SvgPicture.asset(
+      _assetName,
+      key: key,
+      matchTextDirection: matchTextDirection,
+      bundle: bundle,
+      package: package,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      theme: theme,
+      colorFilter: colorFilter,
+      color: color,
+      colorBlendMode: colorBlendMode,
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 
