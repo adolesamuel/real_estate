@@ -17,5 +17,6 @@ class Constants {
     Assets.images.house6.path,
     Assets.images.house7.path,
     Assets.images.house8.path,
+    Assets.images.house8.path,
   ];
 }

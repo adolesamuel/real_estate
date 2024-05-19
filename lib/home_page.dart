@@ -14,8 +14,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final houses = Constants.houses;
-    // houses.shuffle();
+    List<String> houses = Constants.houses;
+    if (houses.length % 3 != 0) {
+      houses = houses.sublist(0, (houses.length ~/ 3) * 3);
+    }
+    houses.shuffle();
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -87,13 +90,14 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(32.r),
               ),
               child: Column(
-                children: [
-                  RealEstateWidget(
-                    house1: houses[0],
-                    house2: houses[1],
-                    house3: houses[2],
-                  ),
-                ],
+                children: List.generate(houses.length ~/ 3, (index) {
+                  final sublist = houses.sublist((3 * index), (3 * index) + 3);
+                  return RealEstateWidget(
+                    house1: sublist[0],
+                    house2: sublist[1],
+                    house3: sublist[2],
+                  );
+                }),
               ),
             ),
           ],

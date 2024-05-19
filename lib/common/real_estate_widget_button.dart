@@ -14,7 +14,7 @@ class RealEstateWidgetButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xFFD0BCA6).withOpacity(0.6),
+      color: const Color(0xFFD0BCA6).withOpacity(0.6),
       clipBehavior: Clip.hardEdge,
       borderRadius: BorderRadius.circular(100.r),
       child: InkWell(

@@ -100,6 +100,7 @@ class RealEstateWidget extends StatelessWidget {
             ),
           ],
         ),
+        10.verticalSpace,
       ],
     );
   }
