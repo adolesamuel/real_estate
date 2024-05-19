@@ -14,34 +14,50 @@ class MapTextField extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: TextField(
-            controller: TextEditingController(text: 'Saint Petersburg'),
-            decoration: InputDecoration(
-                filled: true,
-                fillColor: AppColors.whiteF8F,
-                border: border,
-                prefixIcon: Assets.icons.search.svg(
-                  fit: BoxFit.scaleDown,
-                  colorFilter:
-                      const ColorFilter.mode(AppColors.black, BlendMode.srcIn),
-                ),
-                hintText: 'Find City'),
-          ),
+          child: TweenAnimationBuilder(
+              tween: Tween<double>(begin: 0, end: 1),
+              duration: const Duration(milliseconds: 500),
+              builder: (context, value, child) {
+                return Transform.scale(
+                  scale: value,
+                  child: TextField(
+                    controller: TextEditingController(text: 'Saint Petersburg'),
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: AppColors.whiteF8F,
+                        border: border,
+                        prefixIcon: Assets.icons.search.svg(
+                          fit: BoxFit.scaleDown,
+                          colorFilter: const ColorFilter.mode(
+                              AppColors.black, BlendMode.srcIn),
+                        ),
+                        hintText: 'Find City'),
+                  ),
+                );
+              }),
         ),
         8.horizontalSpace,
-        Container(
-          height: 55,
-          width: 55,
-          decoration: const BoxDecoration(
-            color: AppColors.whiteF8F,
-            shape: BoxShape.circle,
-          ),
-          child: Assets.icons.settings.svg(
-            fit: BoxFit.scaleDown,
-            colorFilter:
-                const ColorFilter.mode(AppColors.black, BlendMode.srcIn),
-          ),
-        ),
+        TweenAnimationBuilder(
+            tween: Tween<double>(begin: 0, end: 1),
+            duration: const Duration(milliseconds: 500),
+            builder: (context, value, child) {
+              return Transform.scale(
+                scale: value,
+                child: Container(
+                  height: 55,
+                  width: 55,
+                  decoration: const BoxDecoration(
+                    color: AppColors.whiteF8F,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Assets.icons.settings.svg(
+                    fit: BoxFit.scaleDown,
+                    colorFilter: const ColorFilter.mode(
+                        AppColors.black, BlendMode.srcIn),
+                  ),
+                ),
+              );
+            }),
       ],
     );
   }

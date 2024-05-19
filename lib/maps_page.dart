@@ -46,56 +46,83 @@ class MapsPage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          SizedBox(
-                            height: 48,
-                            width: 48,
-                            child: IconButton(
-                              onPressed: () {},
-                              iconSize: 20,
-                              icon: Assets.icons.layer.svg(
-                                fit: BoxFit.scaleDown,
-                                width: 20,
-                                height: 20,
-                                colorFilter: const ColorFilter.mode(
-                                    AppColors.whiteF8F, BlendMode.srcIn),
-                              ),
-                            ),
+                          TweenAnimationBuilder(
+                            tween: Tween<double>(begin: 0, end: 1),
+                            duration: const Duration(milliseconds: 500),
+                            builder: (context, value, child) {
+                              return Transform.scale(
+                                scale: value,
+                                child: SizedBox(
+                                  height: 48,
+                                  width: 48,
+                                  child: IconButton(
+                                    onPressed: () {},
+                                    iconSize: 20,
+                                    icon: Assets.icons.layer.svg(
+                                      fit: BoxFit.scaleDown,
+                                      width: 20,
+                                      height: 20,
+                                      colorFilter: const ColorFilter.mode(
+                                          AppColors.whiteF8F, BlendMode.srcIn),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                           8.verticalSpace,
-                          SizedBox(
-                            height: 48,
-                            width: 48,
-                            child: IconButton(
-                              onPressed: () {},
-                              iconSize: 20,
-                              icon: Transform.rotate(
-                                angle: -pi * 0.25,
-                                child: Assets.icons.mapArrow.svg(
+                          TweenAnimationBuilder(
+                            tween: Tween<double>(begin: 0, end: 1),
+                            duration: const Duration(milliseconds: 500),
+                            builder: (context, value, child) {
+                              return Transform.scale(
+                                scale: value,
+                                child: SizedBox(
+                                  height: 48,
+                                  width: 48,
+                                  child: IconButton(
+                                    onPressed: () {},
+                                    iconSize: 20,
+                                    icon: Transform.rotate(
+                                      angle: -pi * 0.25,
+                                      child: Assets.icons.mapArrow.svg(
+                                        fit: BoxFit.scaleDown,
+                                        width: 20,
+                                        height: 20,
+                                        colorFilter: const ColorFilter.mode(
+                                            AppColors.whiteF8F,
+                                            BlendMode.srcIn),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                      TweenAnimationBuilder(
+                          tween: Tween<double>(begin: 0, end: 1),
+                          duration: const Duration(milliseconds: 500),
+                          builder: (context, value, child) {
+                            return Transform.scale(
+                              scale: value,
+                              child: TextButton.icon(
+                                onPressed: () {},
+                                icon: Assets.icons.justified.svg(
                                   fit: BoxFit.scaleDown,
                                   width: 20,
                                   height: 20,
                                   colorFilter: const ColorFilter.mode(
                                       AppColors.whiteF8F, BlendMode.srcIn),
                                 ),
+                                label: Text(
+                                  'List of Variants',
+                                  style: TextStyle(fontSize: 18.sp),
+                                ),
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      TextButton.icon(
-                        onPressed: () {},
-                        icon: Assets.icons.justified.svg(
-                          fit: BoxFit.scaleDown,
-                          width: 20,
-                          height: 20,
-                          colorFilter: const ColorFilter.mode(
-                              AppColors.whiteF8F, BlendMode.srcIn),
-                        ),
-                        label: Text(
-                          'List of Variants',
-                          style: TextStyle(fontSize: 18.sp),
-                        ),
-                      )
+                            );
+                          })
                     ],
                   ),
                 ),

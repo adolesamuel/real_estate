@@ -6,6 +6,7 @@ import 'package:moniepoint_real_estate/common/location_button.dart';
 import 'package:moniepoint_real_estate/common/profile_widget.dart';
 import 'package:moniepoint_real_estate/common/real_estate_widget.dart';
 import 'package:moniepoint_real_estate/common/rent_count_widget.dart';
+import 'package:moniepoint_real_estate/common/text_animation.dart';
 import 'package:moniepoint_real_estate/constants/app_colors.dart';
 import 'package:moniepoint_real_estate/constants/constants.dart';
 
@@ -61,21 +62,25 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Hi, Marina',
-                            style: TextStyle(
-                              fontSize: 24.sp,
-                              color: AppColors.greyA59,
-                              fontWeight: FontWeight.w400,
+                          TextAnimation(
+                            child: Text(
+                              'Hi, Marina',
+                              style: TextStyle(
+                                fontSize: 24.sp,
+                                color: AppColors.greyA59,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                           16.verticalSpace,
-                          Text(
-                            "let's select your\nperfect place",
-                            style: TextStyle(
-                              fontSize: 40.sp,
-                              color: AppColors.black,
-                              fontWeight: FontWeight.w400,
+                          TextAnimation(
+                            child: Text(
+                              "let's select your\nperfect place",
+                              style: TextStyle(
+                                fontSize: 40.sp,
+                                color: AppColors.black,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                           50.verticalSpace,
