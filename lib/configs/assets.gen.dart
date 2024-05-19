@@ -45,6 +45,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/house-8.jpg
   AssetGenImage get house8 => const AssetGenImage('assets/images/house-8.jpg');
 
+  /// File path: assets/images/map.jpg
+  AssetGenImage get map => const AssetGenImage('assets/images/map.jpg');
+
   /// File path: assets/images/profile-image.png
   AssetGenImage get profileImage =>
       const AssetGenImage('assets/images/profile-image.png');
@@ -60,6 +63,7 @@ class $AssetsImagesGen {
         house6,
         house7,
         house8,
+        map,
         profileImage
       ];
 }
