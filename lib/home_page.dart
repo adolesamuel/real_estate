@@ -43,61 +43,81 @@ class HomePage extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
         ),
-        child: ListView(
-          children: [
-            kToolbarHeight.verticalSpace,
-            40.verticalSpace,
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 20.w,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Hi, Marina',
-                    style: TextStyle(
-                      fontSize: 24.sp,
-                      color: AppColors.greyA59,
-                      fontWeight: FontWeight.w400,
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              backgroundColor: Colors.transparent,
+              expandedHeight: 500.h,
+              flexibleSpace: FlexibleSpaceBar(
+                background: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    20.verticalSpace,
+                    kToolbarHeight.verticalSpace,
+                    40.verticalSpace,
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20.w,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hi, Marina',
+                            style: TextStyle(
+                              fontSize: 24.sp,
+                              color: AppColors.greyA59,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          16.verticalSpace,
+                          Text(
+                            "let's select your\nperfect place",
+                            style: TextStyle(
+                              fontSize: 40.sp,
+                              color: AppColors.black,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          50.verticalSpace,
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              BuyCountWidget(),
+                              RentCountWidget(),
+                            ],
+                          ),
+                          34.verticalSpace,
+                        ],
+                      ),
                     ),
-                  ),
-                  16.verticalSpace,
-                  Text(
-                    "let's select your\nperfect place",
-                    style: TextStyle(
-                      fontSize: 40.sp,
-                      color: AppColors.black,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  50.verticalSpace,
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      BuyCountWidget(),
-                      RentCountWidget(),
-                    ],
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            34.verticalSpace,
-            Container(
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: AppColors.whiteF8F,
-                borderRadius: BorderRadius.circular(32.r),
-              ),
-              child: Column(
-                children: List.generate(houses.length ~/ 3, (index) {
-                  final sublist = houses.sublist((3 * index), (3 * index) + 3);
-                  return RealEstateWidget(
-                    house1: sublist[0],
-                    house2: sublist[1],
-                    house3: sublist[2],
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                childCount: 1,
+                (context, index) {
+                  return Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: AppColors.whiteF8F,
+                      borderRadius: BorderRadius.circular(32.r),
+                    ),
+                    child: Column(
+                      children: List.generate(houses.length ~/ 3, (index) {
+                        final sublist =
+                            houses.sublist((3 * index), (3 * index) + 3);
+                        return RealEstateWidget(
+                          house1: sublist[0],
+                          house2: sublist[1],
+                          house3: sublist[2],
+                        );
+                      }),
+                    ),
                   );
-                }),
+                },
               ),
             ),
           ],
