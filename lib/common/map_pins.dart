@@ -19,8 +19,10 @@ class MapPins extends StatelessWidget {
       ),
       child: Assets.icons.building.svg(
         fit: BoxFit.scaleDown,
-        colorFilter:
-            const ColorFilter.mode(AppColors.whiteF8F, BlendMode.srcIn),
+        colorFilter: const ColorFilter.mode(
+          AppColors.whiteF8F,
+          BlendMode.srcIn,
+        ),
       ),
     );
   }
