@@ -99,7 +99,7 @@ class MapsPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                kToolbarHeight.verticalSpace,
+                100.verticalSpace,
               ],
             ),
           ),
