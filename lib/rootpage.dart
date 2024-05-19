@@ -24,15 +24,11 @@ class _RootPageState extends State<RootPage> {
             index: currentPage,
             key: ValueKey<int>(currentPage),
             children: [
-              MapsPage(
-                key: UniqueKey(),
-              ),
+              const MapsPage(),
               Container(
                 color: AppColors.whiteF8F,
               ),
-              HomePage(
-                key: UniqueKey(),
-              ),
+              const HomePage(),
               Container(
                 color: AppColors.whiteF8F,
               ),
