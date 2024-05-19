@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:moniepoint_real_estate/configs/assets.gen.dart';
 import 'package:moniepoint_real_estate/constants/app_colors.dart';
 
 class LocationButton extends StatelessWidget {
@@ -21,9 +22,9 @@ class LocationButton extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.location_pin,
-                  color: AppColors.greyA59,
+                Assets.icons.mapPin.svg(
+                  colorFilter: const ColorFilter.mode(
+                      AppColors.greyA59, BlendMode.srcIn),
                 ),
                 8.horizontalSpace,
                 Text(
