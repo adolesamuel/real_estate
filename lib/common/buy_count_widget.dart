@@ -1,7 +1,7 @@
 import 'package:countup/countup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:moniepoint_real_estate/constants/app_colors.dart';
+import 'package:real_estate/constants/app_colors.dart';
 
 class BuyCountWidget extends StatelessWidget {
   const BuyCountWidget({super.key});

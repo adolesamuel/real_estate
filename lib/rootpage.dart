@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:moniepoint_real_estate/common/app_bottom_nav.dart';
-import 'package:moniepoint_real_estate/configs/assets.gen.dart';
-import 'package:moniepoint_real_estate/constants/app_colors.dart';
-import 'package:moniepoint_real_estate/home_page.dart';
-import 'package:moniepoint_real_estate/maps_page.dart';
+import 'package:real_estate/common/app_bottom_nav.dart';
+import 'package:real_estate/configs/assets.gen.dart';
+import 'package:real_estate/constants/app_colors.dart';
+import 'package:real_estate/home_page.dart';
+import 'package:real_estate/maps_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});

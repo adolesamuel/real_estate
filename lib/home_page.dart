@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:moniepoint_real_estate/common/buy_count_widget.dart';
-import 'package:moniepoint_real_estate/common/location_button.dart';
-import 'package:moniepoint_real_estate/common/profile_widget.dart';
-import 'package:moniepoint_real_estate/common/real_estate_widget.dart';
-import 'package:moniepoint_real_estate/common/rent_count_widget.dart';
-import 'package:moniepoint_real_estate/common/text_animation.dart';
-import 'package:moniepoint_real_estate/constants/app_colors.dart';
-import 'package:moniepoint_real_estate/constants/constants.dart';
+import 'package:real_estate/common/buy_count_widget.dart';
+import 'package:real_estate/common/location_button.dart';
+import 'package:real_estate/common/profile_widget.dart';
+import 'package:real_estate/common/real_estate_widget.dart';
+import 'package:real_estate/common/rent_count_widget.dart';
+import 'package:real_estate/common/text_animation.dart';
+import 'package:real_estate/constants/app_colors.dart';
+import 'package:real_estate/constants/constants.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

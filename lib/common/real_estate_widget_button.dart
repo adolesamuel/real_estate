@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:moniepoint_real_estate/constants/app_colors.dart';
+import 'package:real_estate/constants/app_colors.dart';
 
 class RealEstateWidgetButton extends StatelessWidget {
   final String text;

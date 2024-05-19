@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:moniepoint_real_estate/common/map_text_field.dart';
-import 'package:moniepoint_real_estate/configs/assets.gen.dart';
-import 'package:moniepoint_real_estate/constants/app_colors.dart';
+import 'package:real_estate/common/map_text_field.dart';
+import 'package:real_estate/configs/assets.gen.dart';
+import 'package:real_estate/constants/app_colors.dart';
 import 'package:photo_view/photo_view.dart';
 
 class MapsPage extends StatefulWidget {

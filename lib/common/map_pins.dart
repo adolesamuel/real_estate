@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moniepoint_real_estate/configs/assets.gen.dart';
-import 'package:moniepoint_real_estate/constants/app_colors.dart';
+import 'package:real_estate/configs/assets.gen.dart';
+import 'package:real_estate/constants/app_colors.dart';
 
 class MapPins extends StatelessWidget {
   const MapPins({super.key});

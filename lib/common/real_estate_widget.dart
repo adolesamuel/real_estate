@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:moniepoint_real_estate/common/real_estate_widget_button.dart';
+import 'package:real_estate/common/real_estate_widget_button.dart';
 
 class RealEstateWidget extends StatelessWidget {
   final String house1;
