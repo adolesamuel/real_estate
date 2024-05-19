@@ -18,12 +18,50 @@ class $FontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/house-0.jpg
+  AssetGenImage get house0 => const AssetGenImage('assets/images/house-0.jpg');
+
+  /// File path: assets/images/house-1.jpg
+  AssetGenImage get house1 => const AssetGenImage('assets/images/house-1.jpg');
+
+  /// File path: assets/images/house-2.jpg
+  AssetGenImage get house2 => const AssetGenImage('assets/images/house-2.jpg');
+
+  /// File path: assets/images/house-3.jpg
+  AssetGenImage get house3 => const AssetGenImage('assets/images/house-3.jpg');
+
+  /// File path: assets/images/house-4.jpg
+  AssetGenImage get house4 => const AssetGenImage('assets/images/house-4.jpg');
+
+  /// File path: assets/images/house-5.jpg
+  AssetGenImage get house5 => const AssetGenImage('assets/images/house-5.jpg');
+
+  /// File path: assets/images/house-6.jpg
+  AssetGenImage get house6 => const AssetGenImage('assets/images/house-6.jpg');
+
+  /// File path: assets/images/house-7.jpg
+  AssetGenImage get house7 => const AssetGenImage('assets/images/house-7.jpg');
+
+  /// File path: assets/images/house-8.jpg
+  AssetGenImage get house8 => const AssetGenImage('assets/images/house-8.jpg');
+
   /// File path: assets/images/profile-image.png
   AssetGenImage get profileImage =>
       const AssetGenImage('assets/images/profile-image.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [profileImage];
+  List<AssetGenImage> get values => [
+        house0,
+        house1,
+        house2,
+        house3,
+        house4,
+        house5,
+        house6,
+        house7,
+        house8,
+        profileImage
+      ];
 }
 
 class $FontsEuclidGen {
