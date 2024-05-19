@@ -8,9 +8,14 @@ import 'package:moniepoint_real_estate/configs/assets.gen.dart';
 import 'package:moniepoint_real_estate/constants/app_colors.dart';
 import 'package:photo_view/photo_view.dart';
 
-class MapsPage extends StatelessWidget {
+class MapsPage extends StatefulWidget {
   const MapsPage({super.key});
 
+  @override
+  State<MapsPage> createState() => _MapsPageState();
+}
+
+class _MapsPageState extends State<MapsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
