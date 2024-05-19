@@ -40,33 +40,46 @@ class _RootPageState extends State<RootPage> {
         ),
         Align(
           alignment: Alignment.bottomCenter,
-          child: AppBottomNavBar(
-            currentPage: currentPage,
-            icons: [
-              Assets.icons.searchFilled.svg(
-                colorFilter:
-                    const ColorFilter.mode(AppColors.whiteF8F, BlendMode.srcIn),
-              ),
-              Assets.icons.messages.svg(
-                colorFilter:
-                    const ColorFilter.mode(AppColors.whiteF8F, BlendMode.srcIn),
-              ),
-              Assets.icons.home.svg(
-                colorFilter:
-                    const ColorFilter.mode(AppColors.whiteF8F, BlendMode.srcIn),
-              ),
-              Assets.icons.heart.svg(
-                colorFilter:
-                    const ColorFilter.mode(AppColors.whiteF8F, BlendMode.srcIn),
-              ),
-              Assets.icons.profile.svg(
-                colorFilter:
-                    const ColorFilter.mode(AppColors.whiteF8F, BlendMode.srcIn),
-              ),
-            ],
-            onPageSelected: (page) {
-              currentPage = page;
-              setState(() {});
+          child: TweenAnimationBuilder<Offset>(
+            tween: Tween(
+              begin: const Offset(0, 100),
+              end: Offset.zero,
+            ),
+            curve: Curves.easeInBack,
+            duration: const Duration(seconds: 1),
+            builder: (context, value, child) {
+              return Transform.translate(
+                offset: value,
+                child: AppBottomNavBar(
+                  currentPage: currentPage,
+                  icons: [
+                    Assets.icons.searchFilled.svg(
+                      colorFilter: const ColorFilter.mode(
+                          AppColors.whiteF8F, BlendMode.srcIn),
+                    ),
+                    Assets.icons.messages.svg(
+                      colorFilter: const ColorFilter.mode(
+                          AppColors.whiteF8F, BlendMode.srcIn),
+                    ),
+                    Assets.icons.home.svg(
+                      colorFilter: const ColorFilter.mode(
+                          AppColors.whiteF8F, BlendMode.srcIn),
+                    ),
+                    Assets.icons.heart.svg(
+                      colorFilter: const ColorFilter.mode(
+                          AppColors.whiteF8F, BlendMode.srcIn),
+                    ),
+                    Assets.icons.profile.svg(
+                      colorFilter: const ColorFilter.mode(
+                          AppColors.whiteF8F, BlendMode.srcIn),
+                    ),
+                  ],
+                  onPageSelected: (page) {
+                    currentPage = page;
+                    setState(() {});
+                  },
+                ),
+              );
             },
           ),
         ),
