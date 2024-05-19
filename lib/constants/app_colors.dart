@@ -14,4 +14,5 @@ class AppColors {
   static const whiteF8F = Color(0xFFF8F8F7);
 
   static const brownA49 = Color(0xFFA4937C);
+  static const brown5A5 = Color(0xFF5A5855);
 }

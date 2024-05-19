@@ -66,7 +66,10 @@ class RealEstateWidgetButton extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: const Icon(Icons.chevron_right_outlined),
+                  child: const Icon(
+                    Icons.chevron_right_outlined,
+                    color: AppColors.brown5A5,
+                  ),
                 ),
               ),
             ],
