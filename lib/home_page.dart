@@ -47,14 +47,13 @@ class HomePage extends StatelessWidget {
           slivers: [
             SliverAppBar(
               backgroundColor: Colors.transparent,
-              expandedHeight: 500.h,
+              expandedHeight: 520.h,
               flexibleSpace: FlexibleSpaceBar(
                 background: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    20.verticalSpace,
                     kToolbarHeight.verticalSpace,
-                    40.verticalSpace,
+                    80.verticalSpace,
                     Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 20.w,
