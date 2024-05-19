@@ -24,13 +24,14 @@ class RealEstateWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(32.r),
           ),
-          height: 250,
+          height: 250.h,
           child: Stack(
             alignment: Alignment.bottomCenter,
             children: [
               Image.asset(
                 house1,
                 width: double.infinity,
+                height: 250.h,
                 fit: BoxFit.cover,
               ),
               Padding(
@@ -51,7 +52,7 @@ class RealEstateWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(32.r),
                 ),
-                height: 200,
+                height: 200.h,
                 child: Stack(
                   alignment: Alignment.bottomCenter,
                   children: [
@@ -78,7 +79,7 @@ class RealEstateWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(32.r),
                 ),
-                height: 200,
+                height: 200.h,
                 child: Stack(
                   alignment: Alignment.bottomCenter,
                   children: [
