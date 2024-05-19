@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:moniepoint_real_estate/configs/fonts.gen.dart';
 import 'package:moniepoint_real_estate/constants/app_colors.dart';
 
 class LocationButton extends StatelessWidget {
